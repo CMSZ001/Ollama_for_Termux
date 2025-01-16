@@ -16,7 +16,7 @@ Ollama for Termux is a Bash script that can help you install Ollama on Termux.
 - Install Termux
 [Github Releases](https://github.com/termux/termux-app/releases/latest)  
 [F-Droid](https://f-droid.org/en/packages/com.termux)
-Install Ollama App (install as needed)
+- Install Ollama App (install as needed)
 [Github Releases](https://github.com/JHubi1/ollama-app/releases/latest)
 - Good network
 
