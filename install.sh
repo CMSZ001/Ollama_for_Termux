@@ -55,9 +55,7 @@ if [[ "$0" == *"bash"* ]]; then
 fi
 elif [[ "$0" == *"zsh"* ]]; then
     if ! grep -q "^export OLLAMA_HOST=" /data/data/com.termux/files/home/.zshrc; then
-        echo 'export OLLAMA_HOST=0.0.0.0' >> ~/.bashrc"
-    else
-    fi
+        echo 'export OLLAMA_HOST=0.0.0.0' >> /data/data/com.termux/files/home/.zshrc"
     source /data/data/com.termux/files/home/.zshrc
 fi
 
