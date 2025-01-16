@@ -50,8 +50,10 @@ ln -s /data/data/com.termux/files/home/ollama/ollama /data/data/com.termux/files
 # Configuration
 if [[ "$0" == *"bash"* ]]; then
     echo "export OLLAMA_HOST=0.0.0.0" >> ~/.bashrc
+    source .bashrc
 elif [[ "$0" == *"zsh"* ]]; then
     echo "export OLLAMA_HOST=0.0.0.0" >> ~/.zshrc
+    source .zshrc
 fi
 
 # Cleanup
