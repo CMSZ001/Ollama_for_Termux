@@ -47,6 +47,18 @@ go build .
 # Moving Ollama to Termux's bin directory
 ln -s /data/data/com.termux/files/home/ollama/ollama /data/data/com.termux/files/usr/bin/ollama
 
+# Configuration
+if [[ "$0" == *"bash"* ]]; then
+    echo "export OLLAMA_HOST=0.0.0.0" >> ~/.bashrc
+elif [[ "$0" == *"zsh"* ]]; then
+    echo "export OLLAMA_HOST=0.0.0.0" >> ~/.zshrc
+fi
+
+# Cleanup
+chmod -R 700 ~/go
+rm -r ~/go
+
+# Successful
 echo "Ollama has been installed successfully! | Ollama 安装成功！"
 echo "You can now run 'ollama' in Termux to start Ollama. | 你可以在 Termux 中运行 'ollama' 开始使用 Ollama。"
 echo "Enjoy Ollama! | 享受 Ollama 吧！"
