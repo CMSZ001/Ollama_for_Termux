@@ -6,7 +6,7 @@ read -p "Please enter your choice | 请输入你的选择 (Y/n): " mirror_choice
 mirror_choice=${mirror_choice:-y}
 
 case $mirror_choice in
-    y|Y)
+    y|Y|'')
         mirrors=1
         ;;
     n|N)
@@ -17,6 +17,7 @@ case $mirror_choice in
         exit 1
         ;;
 esac
+
 
 #Installing Necessary Dependencies
 apt update
