@@ -31,6 +31,7 @@ if [ "$mirrors" = 1 ]; then
 else
     git clone --depth=1 https://github.com/ollama/ollama.git
 fi
+
 cd ollama
 
 # Building Ollama
