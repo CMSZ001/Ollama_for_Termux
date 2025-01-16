@@ -8,9 +8,8 @@ English
 
 # Ollama for Termux
 
-# Ollama for Termux Installation Script
-
-This script simplifies the installation process of Ollama on Termux.
+## Introduction
+Ollama for Termux is a Bash script that can help you install Ollama on Termux.
 
 ## Prerequisites
 
