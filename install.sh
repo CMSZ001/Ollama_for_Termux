@@ -21,15 +21,6 @@ case $mirror_choice in
         ;;
 esac
 
-# Clone the repository
-echo "Cloning the repository... | 正在克隆仓库..."
-apt install -y git
-if [ "$mirrors" = 1 ]; then
-    git clone https://gitee.com/CMSZ001/Ollama_for_Termux.git
-else
-    git clone https://github.com/CMSZ001/Ollama_for_Termux.git
-fi
-
 #Installing Necessary Dependencies
 apt update
 apt install -y cmake golang
