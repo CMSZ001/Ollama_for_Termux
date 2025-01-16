@@ -49,10 +49,20 @@ ln -s /data/data/com.termux/files/home/ollama/ollama /data/data/com.termux/files
 
 # Configuration
 if [[ "$0" == *"bash"* ]]; then
-    echo "export OLLAMA_HOST=0.0.0.0" >> ~/.bashrc
-    source .bashrc
+    if ! grep -q "^export OLLAMA_HOST=" /data/data/com.termux/files/home/.bashrc; then
+        echo "export OLLAMA_HOST=0.0.0.0" >> /data/data/com.termux/files/home/.bashrc
+    else
+        fi
+    source /data/data/com.termux/files/home/.bashrc
 elif [[ "$0" == *"zsh"* ]]; then
-    echo "export OLLAMA_HOST=0.0.0.0" >> ~/.zshrc
+    if ! grep -q "^export OLLAMA_HOST=" ~/.zshrc; then
+            echo "export OLLAMA_HOST=0.0.0.0" >> ~/.zshrc
+        else
+            echo "OLLAMA_HOST环境变量已在~/.zshrc中设置，不会重复添加。"
+        fi
+    else
+        echo "~/.zshrc文件不存在，无法写入环境变量设置。"
+    fi
     source .zshrc
 fi
 
