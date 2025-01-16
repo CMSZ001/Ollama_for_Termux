@@ -11,14 +11,10 @@
 ## 介绍
 Ollama for Termux 是一个Bash脚本，它可以帮助您在 Termux 上安装 Ollama。
 
-## 功能
-
-- 使用镜像以加快下载速度
-- 错误处理以确保安装过程顺利
-
 ## 前提条件
 
-- 您的设备上已安装 Termux
+- 安装Termux [Github Releases](https://github.com/termux/termux-app/releases/latest)[F-Droid](https://f-droid.org/en/packages/com.termux)
+- 安装Ollama App（按需安装）[Github Releases](https://github.com/JHubi1/ollama-app/releases/latest)
 - 网络连接
 
 ## 使用方法
