@@ -2,6 +2,7 @@
 
 # Mirrior selection
 rm -rf i
+cd /data/data/com.termux/files/home
 echo "Do you want to use a mirror? | 你想使用镜像吗？"
 read -p "Please enter your choice | 请输入你的选择 (Y/n): " mirror_choice
 mirror_choice=$(echo "$mirror_choice" | tr '[:upper:]' '[:lower:]')
