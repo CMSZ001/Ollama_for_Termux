@@ -31,7 +31,7 @@ curl -fsSL https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/head
 ```
 Gitee:
 ```bash
-curl -fsSL https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh | bash
+curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && bash ~/i
 ```
 
 ## License
