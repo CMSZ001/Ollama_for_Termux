@@ -45,7 +45,7 @@ go generate ./...
 go build .
 
 # Moving Ollama to Termux's bin directory
-ln -s ~/ollama/ollama /data/data/com.termux/files/usr/bin/ollama
+ln -s /data/data/com.termux/files/home/ollama/ollama /data/data/com.termux/files/usr/bin/ollama
 
 echo "Ollama has been installed successfully! | Ollama 安装成功！"
 echo "You can now run 'ollama' in Termux to start Ollama. | 你可以在 Termux 中运行 'ollama' 开始使用 Ollama。"
