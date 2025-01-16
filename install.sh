@@ -27,12 +27,12 @@ apt install -y git cmake golang
 echo "Installing Ollama... | 正在安装Ollama..."
 if [ "$mirrors" = 1 ]; then
     git clone --depth=1 https://ghproxy.cn/https://github.com/ollama/ollama.git
+    cd ollama
     git remote set-url origin https://github.com/ollama/ollama.git
 else
     git clone --depth=1 https://github.com/ollama/ollama.git
+    cd ollama
 fi
-
-cd ollama
 
 # Building Ollama
 echo "Building Ollama... | 正在编译ollama..."
