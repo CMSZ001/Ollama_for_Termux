@@ -1,0 +1,1 @@
+# Ollama_for_Termux
