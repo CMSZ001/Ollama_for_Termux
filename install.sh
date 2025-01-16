@@ -5,7 +5,6 @@ echo "Do you want to use a mirror? | 你想使用镜像吗？"
 read -p "Please enter your choice | 请输入你的选择 (Y/n): " mirror_choice
 if [[ -z "$mirror_choice" ]]; then
     mirror_choice="y"
-    fi
 fi
 
 case $mirror_choice in
