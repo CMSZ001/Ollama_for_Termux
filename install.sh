@@ -23,7 +23,7 @@ esac
 
 #Installing Necessary Dependencies
 apt update
-apt install -y cmake golang
+apt install -y git cmake golang
 
 #Installing Ollama
 echo "Installing Ollama... | 正在安装Ollama..."
