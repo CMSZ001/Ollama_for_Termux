@@ -21,9 +21,13 @@ This script simplifies the installation process of Ollama on Termux.
 
 1. Open Termux
 2. Run the following command to download and run the installation script:
-
+Github:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh | bash
+```
+Gitee:
+```bash
+curl -fsSL https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh | bash
 ```
 
 ## License
