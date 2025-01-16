@@ -21,7 +21,8 @@ Ollama for Termux 是一个Bash脚本，它可以帮助您在 Termux 上安装 O
 
 ## 使用方法
 1. 打开Termux
-2. 运行以下命令以运行安装脚本  
+2. 运行以下命令以运行安装脚本
+
 Github：
 ```bash
 curl -fsSL https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh | bash
