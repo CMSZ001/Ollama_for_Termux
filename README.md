@@ -27,7 +27,7 @@ Install Ollama App (install as needed)
 
 Github:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh | bash
+curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && bash ~/i
 ```
 Gitee:
 ```bash
