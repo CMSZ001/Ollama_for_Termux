@@ -27,11 +27,11 @@ Ollama for Termux is a Bash script that can help you install Ollama on Termux.
 
 Github:
 ```bash
-curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && sh ~/i
+curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && bash ~/i
 ```
 Gitee:
 ```bash
-curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && sh ~/i
+curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && bash ~/i
 ```
 
 ## License
