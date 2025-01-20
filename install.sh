@@ -63,7 +63,7 @@ clear
 echo "Building Ollama... | 正在编译ollama..."
 if [ "$mirrors" = 1 ]; then
     export GO111MODULE=on
-    export GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+    export GOPROXY=https://goproxy.cn
 fi
 
 go generate ./...
