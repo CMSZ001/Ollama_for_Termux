@@ -23,12 +23,12 @@ This is a Bash script for installing Ollama in the Termux environment.Ollama is 
 ## Usage
 
 1. Open Termux
-2. Run the following command to execute the installation script.  
-Github:
+2. Run the following command to execute the installation script.
+* Github:
 ```bash
 curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && bash ~/i
 ```
-Gitee:
+* Gitee:
 ```bash
 curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && bash ~/i
 ```
