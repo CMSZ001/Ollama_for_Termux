@@ -29,11 +29,11 @@
 ## 使用方法
 1. 打开Termux
 2. 运行以下命令以运行安装脚本  
-Github：
+* Github：
 ```bash
 curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && bash ~/i
 ```
-Gitee：
+* Gitee：
 ```bash
 curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && bash ~/i
 ```
