@@ -26,7 +26,7 @@ check_and_install() {
     if ! dpkg -s $package > /dev/null 2>&1; then
         echo -e "${bw}Installing $package... | 安装 $package…${nocol}"
         GreyStart
-        apt install -y $package
+        apt install -y $package -qq
         ColorReset
     else
         echo -e "${grey}$package is already installed. | 已安装 $package。${nocol}"
