@@ -145,7 +145,6 @@ rm -rf i
 clear
 echo -e "${bw}Install Ollama? | 是否安装 Ollama？[Y/n]${nocol}"
 read -p "" -n 1 -r yn
-echo "" # For newline
 case ${yn} in
     [Yy]* | "")
         initialize
