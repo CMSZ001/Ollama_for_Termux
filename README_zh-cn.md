@@ -31,11 +31,11 @@
 2. 运行以下命令以运行安装脚本
 Github：
 ```bash
-curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && sh ~/i
+curl -s -o ~/i https://raw.githubusercontent.com/CMSZ001/Ollama_for_Termux/refs/heads/main/install.sh && bash ~/i
 ```
 Gitee：
 ```bash
-curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && sh ~/i
+curl -s -o ~/i https://gitee.com/CMSZ001/Ollama_for_Termux/raw/main/install.sh && bash ~/i
 ```
 3. 按照脚本提示进行操作，选择是否使用镜像以及是否继续安装。
 4. 安装完成后，可以通过运行`ollama`命令来启动 Ollama。
