@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf i
+
 # Color Codes
 readonly red="\e[91m"   # Red  | 红色
 readonly bw="\e[1m"     # Bold white | 亮白色
