@@ -5,12 +5,6 @@ readonly red="\e[91m"   # Red  | 红色
 readonly bw="\e[1m"     # Bold white | 亮白色
 readonly grey="\e[90m"  #Grey | 灰色
 readonly nocol="\e[0m"  # Default | 默认
-GreyStart() {
-    echo -e "${grey}\c"
-}
-ColorReset() {
-    echo -e "${nocol}\c"
-}
 
 # Initialization
 initialize() {
@@ -25,9 +19,9 @@ check_and_install() {
     package=$1
     if ! dpkg -s $package > /dev/null 2>&1; then
         echo -e "${bw}Installing $package... | 安装 $package…${nocol}"
-        GreyStart
+        echo -e "${grey}\c"
         apt install -y $package -qq
-        ColorReset
+        echo -e "${nocol}\c"
     else
         echo -e "${grey}$package is already installed. | 已安装 $package。${nocol}"
     fi
@@ -36,9 +30,9 @@ check_and_install() {
 # Install necessary dependencies
 install_dependencies() {
     echo -e "${bw}Updating package lists... | 正在更新软件包列表...${nocol}"
-    GreyStart
+    echo -e "${grey}\c"
     apt update -qq
-    ColorReset
+    echo -e "${nocol}\c"
     echo -e "C${bw}hecking and installing necessary dependencies... | 正在检查并安装必要的依赖项...${nocol}"
     check_and_install git
     check_and_install cmake
@@ -68,15 +62,15 @@ configure_mirrors() {
 clone_ollama() {
     echo -e "${bw}Installing Ollama... | 正在安装Ollama...${nocol}"
     if [ "$mirrors" = 1 ]; then
-        GreyStart
+        echo -e "${grey}\c"
         git clone --depth=1 https://gitee.com/mirrors/ollama.git "$HOME/.ollama"
         cd "$HOME/.ollama"
-        ColorReset
+        echo -e "${nocol}\c"
     else
-        GreyStart
+        echo -e "${grey}\c"
         git clone --depth=1 https://github.com/ollama/ollama.git "$HOME/.ollama"
         cd "$HOME/.ollama"
-        ColorReset
+        echo -e "${nocol}\c"
     fi
 }
 
@@ -84,15 +78,15 @@ clone_ollama() {
 build_ollama() {
     echo -e "${bw}Building Ollama... | 正在编译ollama...${nocol}"
     if [ "$mirrors" = 1 ]; then
-        GreyStart
+        echo -e "${grey}\c"
         go env -w GO111MODULE=on
         go env -w GOPROXY=https://goproxy.cn,direct
-        ColorReset
+        echo -e "${nocol}\c"
     fi
-    GreyStart
+    GreyStecho -e "${grey}\c"art
     go generate ./...
     go build .
-    ColorReset
+    echo -e "${nocol}\c"
 }
 
 # Move Ollama to Termux's bin directory
@@ -134,7 +128,6 @@ cleanup() {
 
 # Show tips
 finish_install() {
-    clear
     echo -e "${bw}Ollama has been installed successfully! | Ollama 安装成功！${nocol}"
     echo -e "${bw}You can now run \"ollama\" in Termux to start Ollama. | 你可以在 Termux 中运行 \"ollama\" 以开始使用 Ollama。${nocol}"
     echo -e "${bw}Enjoy Ollama! | 享受 Ollama 吧！${nocol}"
@@ -168,4 +161,3 @@ case ${yn} in
         exit 1
         ;;
 esac
-}
