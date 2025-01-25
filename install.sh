@@ -3,7 +3,7 @@
 # Color Codes
 readonly red="\e[91m"   # Red  | 红色
 readonly bw="\e[1m"     # Bold white | 亮白色
-readonly grey="\e[90m"  #Grey | 灰色
+readonly grey="\e[90m"  # Grey | 灰色
 readonly nocol="\e[0m"  # Default | 默认
 
 # Initialization
@@ -82,6 +82,9 @@ build_ollama() {
         go env -w GO111MODULE=on
         go env -w GOPROXY=https://goproxy.cn,direct
         echo -e "${nocol}\c"
+    else
+        go env -w GO111MODULE=on
+        go env -u GOPROXY
     fi
     GreyStecho -e "${grey}\c"art
     go generate ./...
