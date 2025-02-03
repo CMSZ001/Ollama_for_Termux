@@ -86,7 +86,7 @@ build_ollama() {
         go env -w GO111MODULE=on
         go env -u GOPROXY
     fi
-    GreyStecho -e "${grey}\c"art
+    echo -e "${grey}\c"
     go generate ./...
     go build .
     echo -e "${nocol}\c"
