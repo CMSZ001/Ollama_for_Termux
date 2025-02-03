@@ -137,7 +137,8 @@ finish_install() {
 }
 
 # Start installation
-rm -rf i
+SCRIPT_NAME="$0"
+rm -rf "SCRIPT_NAME"
 clear
 echo -e "${bw}Install Ollama? | 是否安装 Ollama？[Y/n]${nocol}"
 read -p "" -n 1 -r yn
