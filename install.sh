@@ -41,21 +41,23 @@ install_dependencies() {
 
 # Mirror selection
 configure_mirrors() {
-    echo -e "${bw}Do you want to use a mirror? | 你想使用镜像吗？ (Y/n):${nocol}"
-    read -p "" mirror_choice
-    mirror_choice=$(echo "$mirror_choice" | tr '[:upper:]' '[:lower:]')
-    case $mirror_choice in
-        y|'')
-            mirrors=1
-            ;;
-        n)
-            mirrors=0
-            ;;
-        *)
-            echo -e "${red}Invalid choice! | 无效的选择！${nocol}"
-            exit 1
-            ;;
-    esac
+    if [ -z "${mirrors}" ]; then
+        echo -e "${bw}Do you want to use a mirror? | 你想使用镜像吗？ (Y/n):${nocol}"
+        read -p "" mirror_choice
+        mirror_choice=$(echo "$mirror_choice" | tr '[:upper:]' '[:lower:]')
+        case $mirror_choice in
+            y|'')
+                mirrors=1
+                ;;
+            n)
+                mirrors=0
+                ;;
+            *)
+                echo -e "${red}Invalid choice! | 无效的选择！${nocol}"
+                exit 1
+                ;;
+        esac
+    fi
 }
 
 # Clone Ollama repository
