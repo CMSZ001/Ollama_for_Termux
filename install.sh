@@ -65,6 +65,7 @@ configure_mirrors() {
 clone_ollama() {
     echo -e "${bw}Installing Ollama... | 正在安装Ollama...${nocol}"
     if [ -d "$HOME/.ollama" ]; then
+        cd "$HOME/.ollama"
         return 0
     fi
     if [ "$mirrors" = 1 ]; then
