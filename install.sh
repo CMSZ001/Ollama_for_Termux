@@ -9,7 +9,8 @@ readonly nocol="\e[0m"  # Default | 默认
 # Initialization
 initialize() {
     if [ -d "$HOME/.ollama" ]; then
-        rm -rf "$HOME/.ollama"
+        cd "$HOME/.ollama"
+        git pull --rebase
     fi
     cd "$HOME"
 }
