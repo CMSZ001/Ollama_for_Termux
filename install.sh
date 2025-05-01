@@ -64,6 +64,9 @@ configure_mirrors() {
 # Clone Ollama repository
 clone_ollama() {
     echo -e "${bw}Installing Ollama... | 正在安装Ollama...${nocol}"
+    if [ -d "$HOME/.ollama" ]; then
+        return 0
+    fi
     if [ "$mirrors" = 1 ]; then
         echo -e "${grey}\c"
         git clone --depth=1 https://gitee.com/mirrors/ollama.git "$HOME/.ollama"
